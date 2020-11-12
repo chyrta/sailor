@@ -258,21 +258,19 @@ class Sailor {
       _checkAndThrowRouteNotFound(
         routeArgs.name,
         routeArgs.args,
-        // TODO(gurleensethi): Give user the ability to use any type of NavigationType
-        NavigationType.push,
+        routeArgs.navigationType,
       );
 
       final response = _navigate(
         routeArgs.name,
         routeArgs.args,
-        // TODO(gurleensethi): Give user the ability to use any type of NavigationType
-        NavigationType.push,
+        routeArgs.navigationType,
         null,
         null,
         routeArgs.transitions,
         routeArgs.transitionDuration,
         routeArgs.transitionCurve,
-        null,
+        routeArgs.params,
         routeArgs.customTransition,
       );
 
